@@ -16,9 +16,9 @@ import com.Utility.OHRMScreenshots;
 public class LoginFuctionalityTest extends BaseTest{
 
 	Properties property;
-	String excelfileinputpath="/src/main/java/com/OrangeHRMApplicationTestDataFile/OHRMAddEmployeeData.xlsx";
-	String excelfileoutputpath="/src/main/java/com/OrangeHRMApplicationTestResultDataFile/OHRMAddEmployeeTestResultData.xlsx";
-	String SheetName="sheet3";
+	String excelfileinputpath="./src/main/java/com/OrangeHRMApplicationTestDataFile/LoginText.xlsx";
+	String excelfileoutputpath="./src/main/java/com/OrangeHRMApplicationTestResultDataFile/LoginText.xlsx";
+	String SheetName="Sheet1";
 	ExcelCommonMethods excelfile;
 
 	@Test(priority=1,description="validatingLoginPage-LoginpanelText")
@@ -28,19 +28,21 @@ public class LoginFuctionalityTest extends BaseTest{
 		property=OHRMProperty.loadproperty();
 		By LoginpageloginpaneltextLocator=By.id(property.getProperty("loginPanelTextProperty"));
 		String actual_loginpageloinpaneltext=driver.findElement(LoginpageloginpaneltextLocator).getText();
-		excelfile.SetCellValue(1, 1, actual_loginpageloinpaneltext);
+		//excelfile.SetCellValue(1, 1, actual_loginpageloinpaneltext);
 		String expected_loginpageloginpaneltext=excelfile.getcellvalue(1, 0);
 
 		if(actual_loginpageloinpaneltext.equals(expected_loginpageloginpaneltext)) 
 		{
 			Log.info("Sccessful navigated to the OHRMApplication-PASS");
-			excelfile.SetCellValue(1, 2," Sccessful navigated to the OHRMApplication-PASS");
+			excelfile.SetCellValue(1, 15," Sccessful navigated to the OHRMApplication-PASS");
 		}
 		else
 		{
 			Log.info("Failed to navigated to the OHRMApplication-FAIL");
 			excelfile.SetCellValue(1, 2, "Failed to navigated to the OHRMApplication-FAIL");
 			OHRMScreenshots.TakeScreenShot(driver,"errortonavigatetoOHRM");
+			
+			
 		}
 
 	}
@@ -52,8 +54,8 @@ public class LoginFuctionalityTest extends BaseTest{
 		{
 			try
 			{
-				String username=excelfile.getcellvalue(rowIndex, 3);
-				String password=excelfile.getcellvalue(rowIndex, 4);
+				String username=excelfile.getcellvalue(rowIndex, 9);
+				String password=excelfile.getcellvalue(rowIndex, 10);
 
 				By usernameElementLocator=By.id(property.getProperty("userNameProperty"));
 				WebElement usernameElement=driver.findElement(usernameElementLocator);
@@ -65,8 +67,10 @@ public class LoginFuctionalityTest extends BaseTest{
 				passwordElement.clear();
 				passwordElement.sendKeys(password);
 
-				By loginpageloginbuttonLocator=By.className(property.getProperty("loginButtonProperty"));
-				driver.findElement(loginpageloginbuttonLocator).click();
+				By loginpageloginbuttonLocator=By.id(property.getProperty("loginButtonProperty"));
+				WebElement loginpageloginbutton=driver.findElement(loginpageloginbuttonLocator);
+				loginpageloginbutton.click();
+				
 				if (isLoginPage())
 				{
 					//LoginPage
@@ -94,7 +98,7 @@ public class LoginFuctionalityTest extends BaseTest{
 	{
 		try
 		{
-			By loginpageInvalidMessageLocator=By.id(property.getProperty("invalidmessageProperty"));
+			By loginpageInvalidMessageLocator=By.id(property.getProperty("loginpageInvalidErrorMessage"));
 			return driver.findElement(loginpageInvalidMessageLocator).isDisplayed();
 		}
 		catch(Exception e)
@@ -104,8 +108,11 @@ public class LoginFuctionalityTest extends BaseTest{
 	}
 	private void validateHomePage(int rowOfIndex) throws IOException
 	{
-		String expected_HomePageText=excelfile.getcellvalue(1, 5);
-		By HomePageWelcomeadminLocator=By.linkText(property.getProperty("welcomeAdminProperty"));
+		int rowIndex = 1;
+		System.out.println(rowIndex);
+		
+		String expected_HomePageText=excelfile.getcellvalue(1, 11);
+		By HomePageWelcomeadminLocator=By.id(property.getProperty("welcomeAdminProperty"));
 		String actual_HomePagetext=driver.findElement(HomePageWelcomeadminLocator).getText();
 		excelfile.SetCellValue(1, 6, actual_HomePagetext);
 
@@ -122,14 +129,14 @@ public class LoginFuctionalityTest extends BaseTest{
 		}
 	}
 
-	@Test(priority=3)
+	
 	private void Logout()
 	{
-		By HomePageAdminLocator=By.linkText(property.getProperty("welcomeAdminProperty"));
-		WebElement HomePageAdmin=driver.findElement(HomePageAdminLocator);
-		HomePageAdmin.click();
+		By HomePagewelcomeAdminLocator=By.id(property.getProperty("welcomeAdminProperty"));
+		WebElement HomePagewelcomeAdmin=driver.findElement(HomePagewelcomeAdminLocator);
+		HomePagewelcomeAdmin.click();
 
-		By homepagelogoutelementLocator=By.linkText(property.getProperty("logoutProperty"));
+		By homepagelogoutelementLocator=By.id(property.getProperty("logoutProperty"));
 		WebElement HomePageLogoutLocator=driver.findElement(homepagelogoutelementLocator);
 		HomePageLogoutLocator.click();
 	}

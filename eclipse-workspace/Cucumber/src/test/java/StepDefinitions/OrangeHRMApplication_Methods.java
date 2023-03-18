@@ -74,12 +74,21 @@ public class OrangeHRMApplication_Methods {
 			//System.out.println("Its a LoginPage of OrangeHRM Application Url Address Not Matched FAIL");
 			Log.info(actual_CurrentUrlAddressOfOrangeHRMApplicationLoginPage);
 		}
-
-		driver.findElement(By.id("txtUsername")).sendKeys("PULIRAJU");
-
-		driver.findElement(By.id("txtPassword")).sendKeys("Puli996632@");
-
-		driver.findElement(By.className("button")).click();
+        
+		//driver.findElement(By.id("txtUsername")).sendKeys("PULIRAJU");
+		By usernameLocator =By.id("txtUsername");
+		WebElement username =driver.findElement(usernameLocator);
+		username.sendKeys("PULIRAJU");
+		
+		//driver.findElement(By.id("txtPassword")).sendKeys("Puli996632@");
+        By passwordLocator=By.id("txtPassword");
+        WebElement password=driver.findElement(passwordLocator);
+        password.sendKeys("Puli996632@");
+        
+		//driver.findElement(By.className("button")).click();
+        By LoginButtonLocator=By.id("btnLogin");
+        WebElement Loginbutton=driver.findElement(LoginButtonLocator);
+        Loginbutton.click();
 
 		//<a href="#" id="welcome" class="panelTrigger">Welcome Admin</a>
 		By welcomeL=By.id("welcome");
@@ -91,8 +100,6 @@ public class OrangeHRMApplication_Methods {
 		By LogoutL=By.linkText("Logout");
 		WebElement logout=driver.findElement(LogoutL);
 		logout.click();	
-
-
 	}
 
 	@Then("User Should Close the OrangeHRM Application And The Close")
@@ -100,9 +107,5 @@ public class OrangeHRMApplication_Methods {
 
 		driver.quit();
 
-
 	}
-
-
-
 }

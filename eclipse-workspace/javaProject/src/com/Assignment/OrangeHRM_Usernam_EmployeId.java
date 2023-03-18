@@ -14,7 +14,7 @@ public class OrangeHRM_Usernam_EmployeId {
 		WebDriver driver;
 		
 		String applicationUrlAddress="http://127.0.0.1/orangehrm-4.2.0.1/symfony/web/index.php/auth/login";
-		System.setProperty("webdriver.chrome.driver", "./WebDriver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\PULI RAJU\\eclipse-workspace\\eclipse-workspace\\OrangeHRMApplication\\puli\\chromedriver.exe");
 		
 		driver= new ChromeDriver();
 		

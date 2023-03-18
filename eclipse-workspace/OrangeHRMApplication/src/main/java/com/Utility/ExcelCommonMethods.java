@@ -16,7 +16,7 @@ public class ExcelCommonMethods {
 	String SheetName;
 	XSSFWorkbook  workbook;
 
-	public ExcelCommonMethods(String excelfileInputPath,String SheetName,String excelfileoutputpath) throws IOException {
+	public ExcelCommonMethods(String excelfileInputPath,String excelfileoutputpath,String SheetName) throws IOException {
 		
 		this.excelfileinputpath=excelfileInputPath;
 		this.excelfileoutputpath=excelfileoutputpath;
@@ -34,6 +34,7 @@ public class ExcelCommonMethods {
 	}
 	
 	public void SetCellValue(int rowIndex,int cellIndex,String data) throws IOException {
+		
 		XSSFSheet sheet= workbook.getSheet(SheetName);
 		Row row=sheet.getRow(rowIndex);
 		Cell rowOfcell=row.createCell(cellIndex);

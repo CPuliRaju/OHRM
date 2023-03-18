@@ -7,12 +7,13 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
+
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "OHRM_Feature",
                              glue="StepDefinitions",
                              monochrome = true
-                             //dryRun=true,
-                             //tags="@OrangeHRM Login Test"
+                            // dryRun=true,
+                             //tags="@OrangeHRMApplicationLoginTest"
                              )
 
 public class TestRunner {

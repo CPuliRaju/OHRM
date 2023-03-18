@@ -5,7 +5,6 @@
     <classes>
       <class name="com.OranageHRMTestCases.OHRM_AddEmployee">
         <methods>
-          <include name="AddEmployee"/>
           <include name="LoginfuctionaltyTest"/>
           <include name="Applicationclose"/>
           <include name="applicationLaunch"/>
@@ -18,7 +17,6 @@
     <classes>
       <class name="com.OranageHRMTestCases.OrangeHRM_LogInTest">
         <methods>
-          <include name="LoginPanelTest"/>
           <include name="LogOutTest"/>
           <include name="Applicationclose"/>
           <include name="LoginFuctionalityTest"/>

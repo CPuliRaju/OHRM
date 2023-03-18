@@ -12,11 +12,11 @@ public class RediffMailTest {
 	public static void main(String[] args) throws InterruptedException {
 
 
-		// Navigate to OrangeHRM Application //
+		// Navigate to OrangeHRM Application 
 		WebDriver driver;
 
 		String applicationUrlAddress="https://register.rediff.com/register/register.php?FormName=user_details";
-		System.setProperty("webdriver.chrome.driver", "./WebDriver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\PULI RAJU\\eclipse-workspace\\eclipse-workspace\\OrangeHRMApplication\\puli\\chromedriver.exe");
 
 		driver= new ChromeDriver();
 
@@ -53,12 +53,17 @@ public class RediffMailTest {
 		
 		Thread.sleep(5000);
 		
+		password.clear();
+		
 		//<input type="password"
 		//<input type="password" 
 		
 		//Xpath expression  
 		 
-		
+		//input[@type='password']
+		By newpasswordL=By.xpath("//input[@type='password']");
+		WebElement newpassword=driver.findElement(newpasswordL);
+		newpassword.sendKeys("Puli1430");
 		
 		
 		

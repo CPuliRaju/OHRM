@@ -30,8 +30,10 @@ public class Bing_Screenshot {
 		                                    //Type Casting
 		File bingHomepageScreenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(bingHomepageScreenshot, new File("./ScreenShot/bing.png"));
+		
+		driver.quit();
 
-
+    
 	}
 
 }

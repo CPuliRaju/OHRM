@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 08 12:46:34 IST 2023</td>
+<td>Started on:</td><td>Wed Mar 08 11:33:27 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (61 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (64 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,11 +77,11 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.GRID.OHRMApplicationLoginTest.loginTest()'><b>loginTest</b><br>Test class: com.GRID.OHRMApplicationLoginTest</td>
 <td><div><pre>org.testng.TestNGException: 
-Parameter &apos;Browser&apos; is required by @Test on method loginTest but has not been marked @Optional or defined
-in C:\Users\PULI RAJU\AppData\Local\Temp\testng-eclipse-1334386594\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+Cannot inject @Test annotated Method [loginTest] with [class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:439)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:708)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:884)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
 	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
@@ -106,13 +106,13 @@ in C:\Users\PULI RAJU\AppData\Local\Temp\testng-eclipse-1334386594\testng-custom
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace70323523", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace70323523'><pre>org.testng.TestNGException: 
-Parameter &apos;Browser&apos; is required by @Test on method loginTest but has not been marked @Optional or defined
-in C:\Users\PULI RAJU\AppData\Local\Temp\testng-eclipse-1334386594\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1420232606", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1420232606'><pre>org.testng.TestNGException: 
+Cannot inject @Test annotated Method [loginTest] with [class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:439)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:708)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:884)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
 	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
@@ -139,7 +139,7 @@ in C:\Users\PULI RAJU\AppData\Local\Temp\testng-eclipse-1334386594\testng-custom
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.GRID.OHRMApplicationLoginTest@d6e7bab</td></tr>
+<td>com.GRID.OHRMApplicationLoginTest@5fa07e12</td></tr>
 </table><p>
 </body>
 </html>

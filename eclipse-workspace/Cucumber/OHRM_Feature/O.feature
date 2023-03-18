@@ -7,6 +7,12 @@ Scenario: Validating OrangeHRMApplication LogIn Page
 	When User Enter OrangeHRM Application URL Address
 	Then User Should be Navigated to OrangeHRM Application LogIn Page
 	Then User Should Close the OrangeHRM Application And The Close
+	
+	
+	
+	
+	 
+
  
  
 

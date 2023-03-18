@@ -20,9 +20,9 @@ public class Excel_Read_SingleTestData {
 		
 	   XSSFSheet sheet = workbook.getSheet("sheet1");
 	   
-	   Row row=sheet.getRow(0);
+	   Row row=sheet.getRow(2);
 	   
-	   Cell cell=row.getCell(0);
+	   Cell cell=row.getCell(3);
 	   
 	   String data=cell.getStringCellValue();
 	   System.out.println(data);

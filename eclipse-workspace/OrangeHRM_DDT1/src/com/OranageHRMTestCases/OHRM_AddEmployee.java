@@ -58,7 +58,8 @@ public class OHRM_AddEmployee extends BaseTest{
 		
 		FileInputStream file = new FileInputStream("./src/com/ApplicationTestDataFiles/OrangeHRM_LoginTestData.xlsx");
 		XSSFWorkbook workbook=new XSSFWorkbook(file);
-		XSSFSheet sheet =workbook.getSheet("Sheet1");
+		System.out.println(workbook);
+		XSSFSheet sheet =workbook.getSheet("Sheet2");
 		
 		Row row=sheet.getRow(1);
 		Cell rowOfCell=row.getCell(0);
@@ -113,7 +114,6 @@ public class OHRM_AddEmployee extends BaseTest{
 		//<a href="/orangehrm-4.2.0.1/symfony/web/index.php/pim/addEmployee" id="menu_pim_addEmployee">Add Employee</a>
 		By addEmployeeLocator=By.linkText("Add Employee");
 		WebElement AddEmployee=driver.findElement(addEmployeeLocator);
-		
 		AddEmployee.click();
 		
 		System.out.println(driver.getTitle());
@@ -124,7 +124,7 @@ public class OHRM_AddEmployee extends BaseTest{
 		WebElement firstName=driver.findElement(firstNameLocator);
 		firstName.sendKeys("Chakali");
 		
-		Actions act=new Actions(driver);
+		Actions act=new Actions(driver);  
 		act.sendKeys(Keys.TAB).build().perform();
 		
 		//Automating middle name
@@ -144,8 +144,13 @@ public class OHRM_AddEmployee extends BaseTest{
 		Thread.sleep(1000);
 		
 	    Runtime.getRuntime().exec("C:\\Users\\PULI RAJU\\Desktop\\AddEmployeeUploadphoto.exe");
-	   
+	    
+	    
+	    //Runtime.getRuntime().exec("\"C:\\Users\\PULI RAJU\\Desktop\\PhotoEdit.exe\"");
+	    
 	    Thread.sleep(1000);
+	    
+	    
 	    
 		//Save button
 		//<select class="formInputText valid" name="status" id="status">
@@ -159,8 +164,9 @@ public class OHRM_AddEmployee extends BaseTest{
 		By EmployeePhtographLocator=By.id("empPic");
 		WebElement EmployeePhtograph=driver.findElement(EmployeePhtographLocator);
 		
-		boolean flag=EmployeePhtograph.isDisplayed();
-		if(flag)
+		boolean photo=EmployeePhtograph.isDisplayed();
+		
+		if(photo)
 		{
 			System.out.println("Employee Photograph Upload is PASS");
 		}
@@ -168,7 +174,8 @@ public class OHRM_AddEmployee extends BaseTest{
 		{
 			System.out.println("Emlpoyee Photograph Upload is FAIL");
 		}
-		Assert.assertTrue(flag, "Emlpoyee Photograph Upload is FAIL");
+		Assert.assertTrue(photo, "Emlpoyee Photograph Upload is FAIL");
+	
 		
 		System.out.println("  ");
         

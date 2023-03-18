@@ -5,11 +5,9 @@
     <classes>
       <class name="com.OrangeApplicationTestCases.LoginFuctionalityTest">
         <methods>
-          <include name="Logout"/>
           <include name="validatingLoginText"/>
           <include name="Applicationclose"/>
           <include name="applicationLaunch"/>
-          <include name="validateloginfuctionalitytest"/>
         </methods>
       </class> <!-- com.OrangeApplicationTestCases.LoginFuctionalityTest -->
     </classes>
