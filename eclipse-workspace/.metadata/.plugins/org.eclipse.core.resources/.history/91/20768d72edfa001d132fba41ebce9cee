@@ -1,0 +1,19 @@
+package com.Practiec;
+
+public class StyleStatement {
+
+	public static void main(String[] args) {
+		
+		for(int i=5;i>=1;i++) {
+			System.out.println(i+"Raju");
+			if(i==4)
+			{
+				System.out.println(i+"Kohli");
+			}
+		}
+			
+		
+
+	}
+
+}

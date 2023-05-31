@@ -14,7 +14,7 @@ public class monster_CrrentLocation_Select {
         WebDriver driver;
 		
 		String applicationUrlAddress="http://my.monsterindia.com/sponsered_popup.html";
-		System.setProperty("webdriver.chrome.driver", "./WebDriver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./Webdriver/chrome_driver.exe");
 		
 		driver= new ChromeDriver();
 		

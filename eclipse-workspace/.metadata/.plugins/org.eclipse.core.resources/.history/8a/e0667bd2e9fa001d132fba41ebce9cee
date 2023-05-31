@@ -1,0 +1,22 @@
+package com.Practiec;
+
+public class Inheritensce {
+	
+	
+	
+	int a=20;
+	int b=30;
+	
+	public void add(){
+	
+		System.out.println("addition"+(a+b));
+	
+	}
+	
+	public void sub() {
+		
+		System.out.println("subtraction"+(a-b));
+		
+	}
+
+}

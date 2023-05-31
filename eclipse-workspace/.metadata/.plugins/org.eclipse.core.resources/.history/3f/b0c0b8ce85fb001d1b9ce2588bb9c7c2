@@ -1,0 +1,26 @@
+package com.Scanner;
+
+import java.util.Scanner;
+
+public class ExampleScanner {
+
+	public static void main(String[] args) {
+	
+		
+		int p;
+		System.out.println("enter any number");
+		Scanner r=new Scanner(System.in);
+		p=r.nextInt();
+		if(p%2==0) {
+			System.out.println("even number");
+			
+		}
+		else
+		{
+			System.out.println("odd number");
+		}
+		
+
+	}
+
+}

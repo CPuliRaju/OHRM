@@ -1,0 +1,20 @@
+package com.Practiec;
+
+public class Inheritence1 extends Inheritensce{
+	
+	
+	public void multi() {
+		System.out.println("multi"+(a*b));
+	}
+
+	public static void main(String[] args) {
+		
+		Inheritensce raju=new  Inheritensce();
+		raju.add();
+		raju.sub();
+		
+		
+
+	}
+
+}

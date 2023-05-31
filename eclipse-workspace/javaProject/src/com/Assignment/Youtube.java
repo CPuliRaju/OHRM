@@ -27,6 +27,7 @@ public class Youtube {
 		 WebElement search=driver.findElement(searchL);
 		 search.click();
 		
+	
 		By songL=By.xpath("//*[@id=\"search-icon-legacy\"]/yt-icon");
 		WebElement song=driver.findElement(songL);
 		song.click();
@@ -34,6 +35,7 @@ public class Youtube {
 		By songL1=By.xpath("//*[@id=\"thumbnail\"]/yt-image/img");
 		WebElement master=driver.findElement(songL1);
 	    master.click();
+	    
 			
 	}
 
